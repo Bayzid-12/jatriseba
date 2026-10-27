@@ -1,0 +1,11 @@
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Editor and tooling (local only, not part of the demo)
+.vscode/
+.idea/
+
+# Logs and temporary files
+*.log
+*.tmp
