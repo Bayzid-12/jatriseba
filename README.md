@@ -81,20 +81,30 @@ https://jatriseba.pages.dev
 
 ```
 jatriseba/
-├── index.html              # The whole demo: markup, styling, datasets, logic
+├── index.html              # Markup only (entry point, links CSS/JS below)
+├── css/
+│   └── style.css           # All page styling
+├── js/
+│   └── app.js              # Sample datasets first, then rendering + logic
 ├── README.md               # This file
 └── assets/
     └── placeholder.svg     # Placeholder used in this repo copy (see below)
 ```
 
-The sample datasets sit at the top of the main `<script>` block in
-`index.html`, then the rendering and booking logic follows.
+The sample datasets sit at the top of `js/app.js`, then the rendering
+and booking logic follows. `index.html` loads them in this order:
+Leaflet (CDN), a small Leaflet shim, QRCode (CDN), then `js/app.js`.
+That order matters — do not move `app.js` before Leaflet.
 
-### Note on this repo copy (image-light)
+### Note on this repo copy (image-light, split files)
 
-This copy of `index.html` is about 304 KB, so it uploads cleanly to
-GitHub: 60 division, attraction and category photos are replaced with
-`assets/placeholder.svg`. The founder photo is kept as-is.
+This repo copy is split into `index.html`, `css/style.css` and
+`js/app.js` (about 304 KB in total), so it uploads cleanly to GitHub
+and is easier to read than the old single-file version. The old
+single-file `index.html` was replaced by this split version — the
+entry point is still `index.html`, it just loads CSS/JS from separate
+files now. 60 division, attraction and category photos are replaced
+with `assets/placeholder.svg`. The founder photo is kept as-is.
 
 The full version, with all photos inlined, is about 16 MB and is the
 version live at https://jatriseba.pages.dev. The code, search, seat map,
