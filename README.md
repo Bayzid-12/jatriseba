@@ -46,3 +46,13 @@ Kept here on purpose, so they don't get forgotten:
 - Replace the sample datasets with a real API.
 - Move images to `assets/` and split CSS/JS out of the single file.
 - Real accounts, payments and operator verification before any booking goes live.
+
+## Note on this repo version (image-light)
+
+This copy of `index.html` is the image-light version, so it uploads cleanly
+to GitHub: the 60 division, attraction and category photos are replaced
+with `assets/placeholder.svg`. The founder photo is kept as-is.
+
+The full version with all photos is the live demo at
+https://jatriseba.pages.dev — the code, search, seat map, trains, map,
+chat and About sections are otherwise the same.
